@@ -1,0 +1,67 @@
+Gn
+Generator(
+  (linear1): Linear(in_features=128, out_features=2048, bias=True)
+  (block2): ResidualBlock(
+    (relu1): ReLU()
+    (relu2): ReLU()
+    (conv_shortcut): UpSampleConv(
+      (conv): CustomConv2d(
+        (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (depth_to_space): DepthToSpace()
+    )
+    (conv1): UpSampleConv(
+      (conv): CustomConv2d(
+        (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (depth_to_space): DepthToSpace()
+    )
+    (conv2): CustomConv2d(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+  )
+  (block3): ResidualBlock(
+    (relu1): ReLU()
+    (relu2): ReLU()
+    (conv_shortcut): UpSampleConv(
+      (conv): CustomConv2d(
+        (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (depth_to_space): DepthToSpace()
+    )
+    (conv1): UpSampleConv(
+      (conv): CustomConv2d(
+        (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (depth_to_space): DepthToSpace()
+    )
+    (conv2): CustomConv2d(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+  )
+  (block4): ResidualBlock(
+    (relu1): ReLU()
+    (relu2): ReLU()
+    (conv_shortcut): UpSampleConv(
+      (conv): CustomConv2d(
+        (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+      )
+      (depth_to_space): DepthToSpace()
+    )
+    (conv1): UpSampleConv(
+      (conv): CustomConv2d(
+        (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+      (depth_to_space): DepthToSpace()
+    )
+    (conv2): CustomConv2d(
+      (conv): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    )
+  )
+  (relu5): ReLU()
+  (conv5): CustomConv2d(
+    (conv): Conv2d(128, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  )
+  (act5): Tanh()
+)
+The number of parameters: 1202691
